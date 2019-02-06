@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/instagram.b0503764.svg"
   },
   {
-    "revision": "fccfc22cd2ebef1c6c07f2cc02b2ce44",
-    "url": "/Portfolio/static/media/me.fccfc22c.jpg"
-  },
-  {
     "revision": "d4739f5ad132cc643a01a4e2697686ae",
     "url": "/Portfolio/static/media/bg-image-iceland.d4739f5a.jpg"
+  },
+  {
+    "revision": "fccfc22cd2ebef1c6c07f2cc02b2ce44",
+    "url": "/Portfolio/static/media/me.fccfc22c.jpg"
   },
   {
     "revision": "97a83c6c8254a3be07ea436ac3dc9dfe",
