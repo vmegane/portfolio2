@@ -1,0 +1,71 @@
+$mainFont: 'Raleway', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: block;
+    margin: 0 auto;
+    font-family: $mainFont;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+    @media screen and (min-width: 720px) {
+        background-color:$bgColor;
+    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center; 
+    //height: calc(100vh + 53px);
+    &.footer {
+        height: 250px; 
+        background-color: $backgroundColorFooter;
+    }      
+}
+// .main-wrapper {
+//    width: 100%;
+// }
+
+p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin: 5px;
+    span {
+        color: $textHighlightColor;
+    }    
+}
+
+h1 {
+    font-family: $mainFont;
+    color: white;
+    // text-shadow: 9px 7px 15px black;        
+    margin: 20px auto;
+    width: 340px;
+    text-align: center;
+    font-size: 1.8em;
+    letter-spacing: .7px;
+    span {
+        color: $textHighlightColor;
+    }
+}
+
+h2 {
+    font-family: $mainFont;
+    color: black;
+    background-color: white;
+    // text-shadow: 9px 7px 15px black;        
+    margin: 0px 0 15px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: .7px;
+}
