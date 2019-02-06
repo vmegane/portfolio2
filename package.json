@@ -2,7 +2,6 @@
   "name": "portfolio2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vmegane.github.io/portfolio",
   "dependencies": {
     "axios": "^0.18.0",
     "node-sass": "^4.11.0",
@@ -12,6 +11,7 @@
     "react-scripts": "2.1.3",
     "react-scrollable-anchor": "^0.6.1"
   },
+  "homepage": "https://vmegane.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
