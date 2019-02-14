@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/facebook.06468580.svg"
   },
   {
-    "revision": "fe0b864d3d2f41e802f9",
-    "url": "/Portfolio/static/css/main.f8802213.chunk.css"
+    "revision": "6fc33d260f6f4811e529",
+    "url": "/Portfolio/static/css/main.993e9504.chunk.css"
   },
   {
-    "revision": "28b3ee442534c0f7ec65",
-    "url": "/Portfolio/static/js/1.28b3ee44.chunk.js"
+    "revision": "346b5555e1eb81ebb181",
+    "url": "/Portfolio/static/js/1.346b5555.chunk.js"
   },
   {
     "revision": "3b96116072eb85f5a3a2",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/linkedin.73e8a8ac.svg"
   },
   {
-    "revision": "fe0b864d3d2f41e802f9",
-    "url": "/Portfolio/static/js/main.fe0b864d.chunk.js"
+    "revision": "6fc33d260f6f4811e529",
+    "url": "/Portfolio/static/js/main.6fc33d26.chunk.js"
   },
   {
     "revision": "67910a24ef067bf5dc2400ab841889c4",
@@ -32,15 +32,15 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/instagram.b0503764.svg"
   },
   {
-    "revision": "d4739f5ad132cc643a01a4e2697686ae",
-    "url": "/Portfolio/static/media/bg-image-iceland.d4739f5a.jpg"
-  },
-  {
     "revision": "fccfc22cd2ebef1c6c07f2cc02b2ce44",
     "url": "/Portfolio/static/media/me.fccfc22c.jpg"
   },
   {
-    "revision": "97a83c6c8254a3be07ea436ac3dc9dfe",
+    "revision": "d4739f5ad132cc643a01a4e2697686ae",
+    "url": "/Portfolio/static/media/bg-image-iceland.d4739f5a.jpg"
+  },
+  {
+    "revision": "83eec8693226be4da8c21cb232bc3865",
     "url": "/Portfolio/index.html"
   }
 ];
