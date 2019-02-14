@@ -25,15 +25,19 @@ section {
     justify-content: center;
     align-content: space-evenly;
     align-items: center; 
-    //height: calc(100vh + 53px);
+    overflow: hidden;
     &.footer {
-        height: 250px; 
         background-color: $backgroundColorFooter;
+        overflow: visible;
     }      
 }
-// .main-wrapper {
-//    width: 100%;
-// }
+#about {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #e1e1e1 84%, #e1e1e1 99%, #e1e1e1 99%, #f1f1f1 100%, #f6f6f6 100%, #f1f1f1 102%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e1e1e1 84%,#e1e1e1 99%,#e1e1e1 99%,#f1f1f1 100%,#f6f6f6 100%,#f1f1f1 102%);
+    background: linear-gradient(to bottom, #ffffff 0%,#e1e1e1 84%,#e1e1e1 99%,#e1e1e1 99%,#f1f1f1 100%,#f6f6f6 100%,#f1f1f1 102%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1f1f1',GradientType=0 );
+    }
 
 p {
     font-size: 1.2em;
@@ -46,13 +50,12 @@ p {
 
 h1 {
     font-family: $mainFont;
-    color: white;
-    // text-shadow: 9px 7px 15px black;        
+    color: $textColor;
     margin: 20px auto;
-    width: 340px;
     text-align: center;
     font-size: 1.8em;
     letter-spacing: .7px;
+    font-weight: bold;
     span {
         color: $textHighlightColor;
     }
@@ -61,11 +64,8 @@ h1 {
 h2 {
     font-family: $mainFont;
     color: black;
-    background-color: white;
-    // text-shadow: 9px 7px 15px black;        
     margin: 0px 0 15px 0;
     padding: 10px;
     text-align: center;
-    font-size: 1.5em;
     letter-spacing: .7px;
 }

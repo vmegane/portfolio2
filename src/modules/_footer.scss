@@ -8,6 +8,7 @@
     align-self: flex-end;
     color: $textColor;
     
+    
     h1 {
         padding: 20px 20px 20px 20px;
         
@@ -46,11 +47,11 @@ ul {
                 background-color: lighten($backgroundColorFooter, $amount: 40);
             }
             .icon {
-                height: 40px;
-                width: 40px;
+                height: 30px;
+                width: 30px;
                 align-self: center;
                 &:hover {
-                    animation: rotate 1.5s;
+                    animation: rotate 2.2s;
                 }
             }
         }

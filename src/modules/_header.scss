@@ -8,18 +8,15 @@
     .home-content-wrapper {
         background-color: $containerBgColor;
         width: 60%;
-        min-width: 400px;
+        min-width: 340px;
         padding: 40px 0;
         transition-timing-function: ease-in;
-//         -webkit-box-shadow: 2px 4px 19px 2px rgb(214, 213, 213);
-// -moz-box-shadow: 2px 4px 19px 2px rgb(214, 213, 213);
-// box-shadow: 2px 4px 19px 2px rgb(214, 213, 213);
 
     }
     @media screen and (min-width: 720px) {
         background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+        background-size: cover;
+        background-position: center;
     }
     color: $textColor;
     text-align: center;
@@ -35,14 +32,18 @@
     h1 {
         font-family: $mainFont;
         color: white;
-        // text-shadow: 9px 7px 15px black;        
         margin: 20px auto;
-        width: 340px;
         text-align: center;
         font-size: 1.8em;
         letter-spacing: .7px;
+        font-weight: 300;
+       // width: 300px;
         span {
             color: $textHighlightColor;
+        }
+        @media screen and (max-width: 720px) {
+            width: 300px;
+
         }
     }
    

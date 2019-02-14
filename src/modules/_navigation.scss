@@ -55,6 +55,7 @@
 }
 @media screen and (max-width: 720px) {
     .show-menu {   
+        animation: slide-in-blurred-top 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         width: 100%; 
             .navigation-list {
                 display: block;
@@ -85,6 +86,8 @@
     }
     .hide-menu {
         &.list-wrapper {
+            animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
             display: none;
         }
     }
@@ -96,10 +99,10 @@
     position: absolute;
     right: 5px;
     div {
-        width: 45px;
-        height: 5px;
+        width: 42px;
+        height: 4px;
         background-color: white;
-        margin: 9px 0;
+        margin: 7px 0;
         border-radius: 3px;
         border: 1px solid #3c3a3a;
     }

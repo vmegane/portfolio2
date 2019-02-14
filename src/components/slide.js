@@ -29,8 +29,8 @@ class Slide extends React.Component {
                     <div className={this.state.visible ? showContent : hideContent}>
                     <p>{this.props.description}</p>
                     <div className="slide-nav-wrapper">
-                    <a href=""><button>code</button></a>
-                    <a href=""><button>view</button></a>
+                    <a href=""><button className="right">code</button></a>
+                    <a href=""><button className="left">view</button></a>
                     </div>
                 
                     </div>

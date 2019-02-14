@@ -29,14 +29,14 @@ class About extends React.Component {
                         <p>
                             I am junior front-end developer with strong marketing analysis background.
                             I am currently looking for opportunities to contribute to interesting and challenging projects, where I can learn and advance my skills.
-            Feel free to <span>contact me </span> if you're looking for a fast-learning and enthusiastic person to join your team, both full-time and part-time.
+            Feel free to <a href='#contact'>contact me</a> if you're looking for a fast-learning and enthusiastic person to join your team, both full-time and part-time.
         </p>
                     </div>
                     <div className="inner-wrapper">
 
                     
                     <div className="skills-container">
-                        <h2>Technical Skills</h2>
+                        <h2>Technologies</h2>
                         <ul>
                             {
                                 this.state.skills.map((item, index) => {
@@ -45,7 +45,6 @@ class About extends React.Component {
                                             <div>
                                                 <div className="inner-wrapper">
                                                     <div className="skill-name"> {item.name} </div>
-                                                    <div className="skill-level"> {item.level}% </div>
                                                 </div>
                                                 <div className="bar-wrapper">
                                                     <div className="bar-background"></div>

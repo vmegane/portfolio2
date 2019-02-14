@@ -15,28 +15,28 @@ class Projects extends React.Component {
             projects: [
                 {
                     id: 1,
-                    img: 'https://fakeimg.pl/340x200',
+                    img: 'https://fakeimg.pl/300x200',
                     title: 'Roomies',
                     description: 'An App for flat-sharing, React with Firebase back-end and authentication, work in progress',
                     label: 'react'
                 },
                 {
                     id: 2,
-                    img: 'https://fakeimg.pl/340x200',
+                    img: 'https://fakeimg.pl/300x200',
                     title: 'Memory Game',
                     description: 'Quick practise project for Udacity Nanodgree program, game controlled with pure JS',
                     label: 'pure js'
                 },
                 {
                     id: 3,
-                    img: 'https://fakeimg.pl/340x200',
+                    img: 'https://fakeimg.pl/300x200',
                     title: 'title3',
                     description: 'some pituput blah',
                     label: 'ember'
                 },
                 {
                     id: 4,
-                    img: 'https://fakeimg.pl/340x200',
+                    img: 'https://fakeimg.pl/300x200',
                     title: 'title4',
                     description: 'some pituput blah',
                     label: 'ember'
@@ -66,6 +66,7 @@ class Projects extends React.Component {
 
     render() {
         let allProjects = this.state.projects;
+        let classes = 'button'
         let filteredProjects = [];
         let query = this.state.filteredby;
         console.log('query', query)
@@ -91,11 +92,11 @@ class Projects extends React.Component {
                         <div className="filtering-wrapper">
                             <ul className="filtering-nav">
                                 <li>
-                                    <button className="button" onClick={this.clearFiltering}> all </button>
+                                    <button className={ query === '' ? 'button active' : 'button'} onClick={this.clearFiltering}> all </button>
                                 </li>
 
                                 {this.state.labels.map((label, index) => {
-                                    return <li key={index}> <button className="button" onClick={this.filterProjects}>{label}</button> </li>
+                                    return <li key={index}> <button className={ query === label ? 'button active' : 'button'} onClick={this.filterProjects}>{label}</button> </li>
                                 })
                                 }
                             </ul>

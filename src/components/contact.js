@@ -5,6 +5,7 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import { goToTop } from 'react-scrollable-anchor';
 import Alert from './alert';
 import axios from 'axios';
+import { timeout } from 'q';
 
 
 
@@ -18,7 +19,8 @@ class Contact extends React.Component {
             nameValid: false,
             emailValid: false,
             messageValid: false,
-            formValid: false
+            formValid: false,
+            messageSent: null
         }
     }
 
@@ -72,11 +74,23 @@ class Contact extends React.Component {
           axios
             .post(`https://api.emailjs.com/api/v1.0/email/send`, emailData)
             .then(res => {
-              console.log(res);
-            });
-
+                //console.log(res.data)
+              if (res.data === 'OK') {
+                  this.setState({ messageSent: true});
+                  setTimeout( () => {
+                    this.setState({ messageSent: null,
+                                    name: '',
+                                    email: '',
+                                    message: ''})
+                }, 2000)
+              } else {
+                  this.setState({ messageSent: false});
+                  setTimeout( () => {
+                    this.setState({ messageSent: null})
+                }, 2000)
+              }
+            })
         } 
-        
     }
 
     handleName = (e) => {
@@ -104,7 +118,7 @@ class Contact extends React.Component {
                         <h1>Contact me</h1>
 
                         <p> Want to work on a project together? Any feedback? Feel free to get in touch.</p>
-
+                        <p>Use the form below or email me at <a href="mailto:paulina.opacka@gmail.com">paulina.opacka@gmail.com</a></p>
 
                         <form name="contactform" className="contactform" onSubmit={this.contactSubmit}>
                             <div className="contactform-wrapper">
@@ -121,6 +135,7 @@ class Contact extends React.Component {
 
                         </form>
                     </div>
+                    {this.state.messageSent && <Alert message={ this.state.messageSent ? 'Your message has been sent :)' : 'There was an error, please try again :)' }/>}
                 </section>
             </ScrollableAnchor>
         );

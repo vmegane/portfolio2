@@ -1,6 +1,4 @@
-#about {
-    background-color: #c4c4c4;
-}
+
 .about-wrapper {
     //height: 100vh;
     width: 100vw;
@@ -13,7 +11,7 @@
             @media screen and (min-width: 720px) {
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
+                justify-content: space-between;
 
             }
             display: flex;
@@ -28,26 +26,34 @@
             }
         }
         width: 90%;
-        //height: 100vh;
-        min-width: 400px;
+        min-width: 340px;
+        max-width: 800px;
         padding: 40px 0;
-    
+        overflow-y: hidden;
+
         .about-container {
             //border: 3px solid white;
             padding: 0 0 15px 0; 
                }
         .about-profile-wrapper {
-            //width: 46%;
+            @media screen and (min-width: 720px) {
+                width: 48%;
+                max-width: 400px;
+            }
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
         .skills-container {
-            //width: 46%;
-            ul {
+            @media screen and (min-width: 720px) {
+                width: 48%;
+                max-width: 400px;
+            }
+                        ul {
                 display: flex;
                 flex-direction: column;
+                width: 100%;
                 li {
                     font-size: 1em;
                     font-weight: 600;
@@ -59,10 +65,12 @@
                     padding: 2px;
                     margin: 2px;
                     height: 30px;
+                    width: 100%;
 
             
                     & > div {
-                        width: 250px;
+                        width: 100%;
+                        max-width: 500px;
                         .inner-wrapper {
                             display: flex;
                             justify-content: baseline;
@@ -139,27 +147,34 @@
     // box-shadow: -1px 4px 16px 0px rgba(0,0,0,0.75);
     h1 {
         font-family: $mainFont;
-        color: white;
+        color: $textColor;
         // text-shadow: 9px 7px 15px black;        
         margin: 20px auto;
         width: 340px;
         text-align: center;
         font-size: 1.8em;
         letter-spacing: .7px;
+        font-weight: bold;
         span {
             color: $textHighlightColor;
         }
     }
         h2 {
             font-family: $mainFont;
-            color: black;
-            background-color: white;
-            // text-shadow: 9px 7px 15px black;        
+            color:$textHighlightColor;
             margin: 0px 0 15px 0;
             padding: 10px;
             text-align: center;
             font-size: 1.5em;
             letter-spacing: .7px;
+            
+            
         }
+        
 }
 
+a {
+    color: $textHighlightColor;
+    text-decoration: none;
+    font-weight: 500;
+}

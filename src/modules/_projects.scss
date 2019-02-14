@@ -8,10 +8,22 @@
     color: $textColor;
     background-color: $backgroundColorFooter;
     padding-bottom: 30px;
+    background: #cecece;
+background: -moz-linear-gradient(top, #cecece 0%, #a3a3a3 100%);
+background: -webkit-linear-gradient(top, #cecece 0%,#a3a3a3 100%);
+background: linear-gradient(to bottom, #cecece 0%,#a3a3a3 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cecece', endColorstr='#a3a3a3',GradientType=0 );
     
     h1 {
         padding: 20px 20px 20px 20px;
+        font-size: 1.8em;
+    letter-spacing: .7px;
+    font-weight: bold;
         
+    }
+    p {
+        width: 80%;
+        max-width: 800px;
     }
 }
 .slider-wrapper {
@@ -19,6 +31,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    li {
+        animation: fade-in-bl 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
 }
 
 .slider-nav {
@@ -69,23 +84,28 @@ ul {
 }
 
 .button {
-    height: 40px;
-    width: 100px;
-    background-color: $textHighlightColor;
-    color: white;
+
+    height: 30px;
+    width: 80px;
+    &.active {
+        background-color: $textHighlightColor;
+        color: white;
+    }
     font-size: 14px;
     border: 0;
-    
+    border-bottom: 1px solid $textHighlightColor;
+    background: none;
+    transition: ease 1s;
+    outline: 0;
 }
 
 .project-slide {
-
     h2 {
         width: 100%;
         padding: 10px 0 10px 0;
     }
     div {
-        transition-duration: 1.5s;
+        transition-duration: 0.5s;
         &.hide {
             opacity: 0;
         }
@@ -94,8 +114,10 @@ ul {
         }
         p {
             text-align: center;
-            background-color: white;
-            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0 auto;
+            width: 100%;
+            font-size: 14px;
           
         }
         &.slide-nav-wrapper {
@@ -104,9 +126,20 @@ ul {
             flex-direction: row;
             margin-bottom: 20px;
             button {
-                height: 20px;
+                height: 30px;
                 width: 60px;
-                background-color: aqua;
+                background-color:transparent;
+                color: white;
+                border: 2px solid $borderColor;
+                margin: 3px;
+                font-family: $mainFont;
+                font-size: 16px;
+                &.right {
+                    border-right: 0;
+                }
+                &.left {
+                    border-left: 0;
+                }
             }
         }
     }

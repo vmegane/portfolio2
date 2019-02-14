@@ -8,11 +8,9 @@ class Alert extends React.Component {
     }
 
     render() {
-        console.log('w renderze', this.props)
-
             return (
                 <div className="alert-box">
-                     <span>{this.props.alertText}</span>
+                     <span>{this.props.message}</span>
                 </div>
              );        
         }
