@@ -1,7 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { configureAnchors } from 'react-scrollable-anchor';
-import ScrollableAnchor from 'react-scrollable-anchor';
 
 
 class Slide extends React.Component {
@@ -19,18 +16,17 @@ class Slide extends React.Component {
         }
     
     render() {
-        let showContent = 'show';
-        let hideContent = 'hide';
+      
 
         return (
 
-                    <div className="project-slide" style={{backgroundImage: `url(${this.props.img})`, backgroundSize: 'cover'}} onClick={this.toggleDescription}>
+                    <div className="project-slide" style={{backgroundImage: `url(${this.props.img})`, backgroundSize: 'cover', backgroundPosition: 'center'}} onClick={this.toggleDescription}>
                     <h2>{this.props.title}</h2>
-                    <div className={this.state.visible ? showContent : hideContent}>
+                    <div className={this.state.visible ? 'show' : 'hide'}>
                     <p>{this.props.description}</p>
                     <div className="slide-nav-wrapper">
-                    <a href=""><button className="right">code</button></a>
-                    <a href=""><button className="left">view</button></a>
+                    <a target="_blank" rel="noopener noreferrer" href={this.props.code}><button className="right">code</button></a>
+                    <a target="_blank" rel="noopener noreferrer" href={this.props.preview}><button className="left">view</button></a>
                     </div>
                 
                     </div>
@@ -42,3 +38,4 @@ class Slide extends React.Component {
 }
 
 export default Slide;
+

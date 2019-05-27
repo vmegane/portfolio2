@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { configureAnchors } from 'react-scrollable-anchor';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import { goToTop } from 'react-scrollable-anchor';
 import Alert from './alert';
 import axios from 'axios';
-import { timeout } from 'q';
+import Slide from 'react-reveal/Slide';
 
 
 
@@ -110,7 +107,7 @@ class Contact extends React.Component {
     render() {
 
         return (
-            <ScrollableAnchor id={'#about'}>
+            <ScrollableAnchor id={'contact'}>
 
                 <section id="contact" className="main-wrapper">
                     <div className="contact-content-wrapper">
@@ -119,6 +116,7 @@ class Contact extends React.Component {
 
                         <p> Want to work on a project together? Any feedback? Feel free to get in touch.</p>
                         <p>Use the form below or email me at <a href="mailto:paulina.opacka@gmail.com">paulina.opacka@gmail.com</a></p>
+                        <Slide bottom>
 
                         <form name="contactform" className="contactform" onSubmit={this.contactSubmit}>
                             <div className="contactform-wrapper">
@@ -134,8 +132,9 @@ class Contact extends React.Component {
                             </div>
 
                         </form>
+                        </Slide>
                     </div>
-                    {this.state.messageSent && <Alert message={ this.state.messageSent ? 'Your message has been sent :)' : 'There was an error, please try again :)' }/>}
+                    {this.state.messageSent && <Alert message={ this.state.messageSent ? 'Your message has been sent :)' : 'There was an error, please try again :(' }/>}
                 </section>
             </ScrollableAnchor>
         );

@@ -16,14 +16,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cecece', end
     
     h1 {
         padding: 20px 20px 20px 20px;
-        font-size: 1.8em;
-    letter-spacing: .7px;
+        font-size: 1.5em;
+    //letter-spacing: .7px;
     font-weight: bold;
         
     }
     p {
         width: 80%;
         max-width: 800px;
+        text-align: center;
+        font-size: 1em;
     }
 }
 .slider-wrapper {
@@ -31,9 +33,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cecece', end
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    li {
-        animation: fade-in-bl 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    }
+    //li {
+        //animation: fade-in-bl 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    //}
 }
 
 .slider-nav {
@@ -100,21 +102,29 @@ ul {
 }
 
 .project-slide {
+    //border-bottom: 2px solid $borderColor;
     h2 {
         width: 100%;
         padding: 10px 0 10px 0;
+        font-family: $headerFont;
+        font-size: 1.2em;
+        background-color: rgba(255, 255, 255, 0.6) ;
     }
     div {
-        transition-duration: 0.5s;
-        &.hide {
-            opacity: 0;
-        }
-        &.show {
+        background-color: rgba(255, 255, 255, 0.6) ;
+        transition-duration: 0.5s;       
+        padding-top: 15px; 
+            &.hide {
+                opacity: 0;
+            }
+            &.show {
             opacity: 100%;
-        }
+            }
+            
+            
         p {
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.5);
+            //background-color: rgba(255, 255, 255, 0.5);
             margin: 0 auto;
             width: 100%;
             font-size: 14px;
@@ -125,12 +135,12 @@ ul {
             justify-content: center;
             flex-direction: row;
             margin-bottom: 20px;
-            button {
+             button {
                 height: 30px;
                 width: 60px;
-                background-color:transparent;
+                background-color: $textHighlightColor;
                 color: white;
-                border: 2px solid $borderColor;
+                //border: 2px solid $borderColor;
                 margin: 3px;
                 font-family: $mainFont;
                 font-size: 16px;
@@ -144,8 +154,8 @@ ul {
         }
     }
     
-    height: 200px;
-    width: 340px;
+    height: 280px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

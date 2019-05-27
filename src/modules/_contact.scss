@@ -44,12 +44,13 @@
     flex-direction: column;
     bottom: 0px;
     z-index: 100;
-    background-color: pink;
+    background-color: $barColor;
     font-size: small;
     width: 250px;
     height: 50px;
     border: 1px solid black;
     border-radius: 3px;
+    margin: 0 auto;
     animation-name: slide-up;
     animation-duration: 2s;
     transition: width 2s linear 1s;

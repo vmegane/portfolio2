@@ -17,12 +17,13 @@
             display: flex;
             flex-direction: column;
             .profile-pic {
-                width: 200px;
-                height: 200px;
+                width: 92%;
+                height: 220px;
                 background-image: url('../src/images/me.jpg');
                 background-position: center;
-                background-size: contain;
-                border-radius: 50%;
+                background-size: cover;
+                border-radius: 2px;
+              
             }
         }
         width: 90%;
@@ -37,13 +38,27 @@
                }
         .about-profile-wrapper {
             @media screen and (min-width: 720px) {
-                width: 48%;
+                width: 45%;
                 max-width: 400px;
-            }
+                margin: 0 auto;
+                }
+            width: 84%;
+            margin: 15px auto 10px auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-bottom: 2px solid $borderColor;
+                    h2 {
+                color: $textColor;
+            }
+            p {
+                font-size: 1em;
+            }
         }
         .skills-container {
             @media screen and (min-width: 720px) {
@@ -53,7 +68,11 @@
                         ul {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
+                width: 90%;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                padding-bottom: 20px;
                 li {
                     font-size: 1em;
                     font-weight: 600;
@@ -78,7 +97,12 @@
                                 width: 100%;
                                 align-self: center;
                                 display: flex;
-                                padding-left: 10px;    
+                                padding-left: 10px; 
+                                position: relative;
+                                top: 15px;
+                                z-index: 2;  
+                                color: white;
+ 
                                             }
                             .skill-level {
                                 width: 44px;
@@ -93,19 +117,18 @@
                             .bar-background {
                                 width: 100%;
                                 background-color: rgb(207, 205, 205);
-                                height: 6px;
-                                border-radius: 3px;
+                                height: 18px;
+                                /* border-radius: 3px; */
+                                border-bottom: 2px solid #617575;
+                                z-index: 1;
                             }
                             @for $level from 1 through 100 {
                                 .bar-fill-#{$level} {
                                     width: $level * 1%;
-                                    background-image: linear-gradient(to right, #6b8eab, #97daef);
-                                    //background-color: $borderColor;
-                                    height: 6px;
+                                    background-image: linear-gradient(to right,$barColor, #6b8eab);
+                                    height: 18px;
                                     position: relative;
-                                    top: -6px;
-                                    border-radius: 3px;
-                                    animation: appear 2s;
+                                    top: -20px;
                                 }
                             }
 
@@ -146,7 +169,7 @@
     // -moz-box-shadow: -1px 4px 16px 0px rgba(0,0,0,0.75);
     // box-shadow: -1px 4px 16px 0px rgba(0,0,0,0.75);
     h1 {
-        font-family: $mainFont;
+        font-family: $headerFont;
         color: $textColor;
         // text-shadow: 9px 7px 15px black;        
         margin: 20px auto;
@@ -160,13 +183,13 @@
         }
     }
         h2 {
-            font-family: $mainFont;
-            color:$textHighlightColor;
+            font-family: $headerFont;
+            color:$textColor;
             margin: 0px 0 15px 0;
             padding: 10px;
             text-align: center;
             font-size: 1.5em;
-            letter-spacing: .7px;
+            //letter-spacing: .7px;
             
             
         }

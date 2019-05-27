@@ -1,9 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { configureAnchors } from 'react-scrollable-anchor';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import Slide from './slide';
-import { all } from 'q';
+import Project from './slide';
+import Flip from 'react-reveal/Flip';
+import portfolio from '../images/portfolio.jpg';
+import memory from '../images/memory.jpg'
+
 
 
 class Projects extends React.Component {
@@ -18,28 +19,35 @@ class Projects extends React.Component {
                     img: 'https://fakeimg.pl/300x200',
                     title: 'Roomies',
                     description: 'An App for flat-sharing, React with Firebase back-end and authentication, work in progress',
-                    label: 'react'
+                    label: 'react',code: 'https://github.com/vmegane/Roomies3',
+                    preview: 'https://vmegane.github.io/Roomies3/'
                 },
                 {
                     id: 2,
-                    img: 'https://fakeimg.pl/300x200',
+                    img: memory,
                     title: 'Memory Game',
                     description: 'Quick practise project for Udacity Nanodgree program, game controlled with pure JS',
-                    label: 'pure js'
+                    label: 'pure js',
+                    code: 'https://github.com/vmegane/memory-game',
+                    preview: 'https://vmegane.github.io/memory-game/'
                 },
                 {
                     id: 3,
                     img: 'https://fakeimg.pl/300x200',
                     title: 'title3',
                     description: 'some pituput blah',
-                    label: 'ember'
+                    label: 'ember',
+                    code: 'https://github.com/vmegane/memory-game',
+                    preview: 'https://vmegane.github.io/memory-game/'
                 },
                 {
                     id: 4,
-                    img: 'https://fakeimg.pl/300x200',
-                    title: 'title4',
-                    description: 'some pituput blah',
-                    label: 'ember'
+                    img: portfolio,
+                    title: 'Portfolio',
+                    description: 'Portfolio page, react experiment with one page website, work on progress',
+                    label: 'react',
+                    code: 'https://github.com/vmegane/Portfolio',
+                    preview: 'https://vmegane.github.io/Portfolio/'
                 },
             ]
         }
@@ -78,25 +86,25 @@ class Projects extends React.Component {
         }
 
         return (
-            <ScrollableAnchor id={'#projects'}>
+            <ScrollableAnchor id={'projects'}>
 
                 <section id="projects" className="main-wrapper">
 
                     <div className="projects-content-wrapper">
                         <h1>My work</h1>
                         <p>
-                            sdc,sd;l sdlcsmdlc sldkcm slkcm slkdmclksdcmsdlkcm slkdmclksdmc slkdmc sldkcm sd
-
+                    A few of the projects I've created along the way, I will be including more positions shortly :). <br/>
+                    Tap on a project for details.
                         </p>
 
                         <div className="filtering-wrapper">
                             <ul className="filtering-nav">
                                 <li>
-                                    <button className={ query === '' ? 'button active' : 'button'} onClick={this.clearFiltering}> all </button>
+                                    <button className={query === '' ? 'button active' : 'button'} onClick={this.clearFiltering}> all </button>
                                 </li>
 
                                 {this.state.labels.map((label, index) => {
-                                    return <li key={index}> <button className={ query === label ? 'button active' : 'button'} onClick={this.filterProjects}>{label}</button> </li>
+                                    return <li key={index}> <button className={query === label ? 'button active' : 'button'} onClick={this.filterProjects}>{label}</button> </li>
                                 })
                                 }
                             </ul>
@@ -104,21 +112,24 @@ class Projects extends React.Component {
                         </div>
                         <div className="slider-wrapper">
                             <ul>
-                                {
-                                    filteredProjects.map(project => {
-                                        return (
-                                            <li key={project.id}>
-                                                <Slide
-                                                    img={project.img}
-                                                    title={project.title}
-                                                    description={project.description} />
-                                            </li>
-                                        )
+                                    {
+                                        filteredProjects.map(project => {
+                                            return (
+                                                <li key={project.id}>
+                                                <Flip bottom>
+                                                <Project
+                                                        img={project.img}
+                                                        title={project.title}
+                                                        description={project.description}
+                                                        code={project.code}
+                                                        preview={project.preview} />
+                                                </Flip>
+                                                    
+                                                </li>
+                                            )
 
-                                    })
-                                }
-
-
+                                        })
+                                    }
 
                             </ul>
 

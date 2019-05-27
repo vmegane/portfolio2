@@ -3,46 +3,53 @@
     border-bottom: 5px solid $borderColor;
     background-color: hsl(240, 100%, 4%);
     position: sticky;
-    top: 0;
     z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
     .list-wrapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 100%;
-       
+        width: 100%;   
     }
     
-    @media screen and (min-width: 720px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-    }
+    // @media screen and (min-width: 720px) {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     width: 100%;
+    //}
   
-    .navigation-list {
-        display: block;
-    width: 100%;
-    @media screen and (min-width: 720px) { 
-        display: flex;
-        flex-direction: row;
-        a {
-            color: white;
-            text-decoration: none;
-            &:hover {
-                color: $textHighlightColor;
-                transition: 1s;
-            }
+    .navigation-list-desktop {
+            display: none;
+            @media screen and (min-width: 720px) {
+                display: block;
+                display: flex;
+                flex-direction: row;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    &:hover {
+                        color: $textHighlightColor;
+                        transition: 1s;
+                    }
+                }
+                /* background: #01355f; */
+                padding: 15px;
+                align-content: center;
+                justify-content: space-evenly;
+                font-size: 1.3em;
+                width: 80%;
+                max-width: 700px;
+                position: absolute;
+                top: 0px;
+                
+            
         }
-        /* background: #01355f; */
-        padding: 15px;
-        align-content: center;
-        justify-content: space-evenly;
-        font-size: 1.3em;
-        width: 80%;
-        max-width: 700px;
-        
-    }
+       
+    
        
     }
 
@@ -55,18 +62,19 @@
 }
 @media screen and (max-width: 720px) {
     .show-menu {   
-        animation: slide-in-blurred-top 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        // animation: slide-in-blurred-top 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
         width: 100%; 
             .navigation-list {
                 display: block;
                 position: relative;
-                top: 116px;            
+                top: 140px;            
                 display: flex;
                 flex-direction: column;
                 background:#000021;
                 padding: 10px;
                 align-content: center;
                 justify-content: center;
+                width: 100%;
                 li {
                     a {
                         color: white;
@@ -85,11 +93,10 @@
         
     }
     .hide-menu {
+        display: none;
         &.list-wrapper {
-            animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-
-            display: none;
-        }
+            //animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            display: none       }
     }
   
 }

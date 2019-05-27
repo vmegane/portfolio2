@@ -1,27 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { configureAnchors } from 'react-scrollable-anchor';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import Reveal from 'react-reveal/Reveal';
 
 
-class Header extends React.Component {
-
-    render() {
+function Header() {
         return (
-            <ScrollableAnchor id={'#home'}>
+            <ScrollableAnchor id={'home'}>
 
             <section id="home" className="main-wrapper header-wrapper">
                 <div className="home-content-wrapper">
                     <h1>Hello, I am <span>Paulina Opacka</span></h1>
                     <h1>I am a front-end developer</h1>
+                    <Reveal effect="pulse">
                     <a href='#about'>
                         <button className="primary-button blink">Get to know me</button>
                     </a>
+                    </Reveal>
                 </div>
             </section>
             </ScrollableAnchor>
         );
-    }
+    
 }
 
 export default Header;

@@ -1,4 +1,6 @@
 $mainFont: 'Raleway', sans-serif;
+$headerFont: 'Raleway-bold', sans-serif;
+
 html {
     scroll-behavior: smooth;
 }
@@ -33,14 +35,10 @@ section {
 }
 #about {
     background: #ffffff;
-    background: -moz-linear-gradient(top, #ffffff 0%, #e1e1e1 84%, #e1e1e1 99%, #e1e1e1 99%, #f1f1f1 100%, #f6f6f6 100%, #f1f1f1 102%);
-    background: -webkit-linear-gradient(top, #ffffff 0%,#e1e1e1 84%,#e1e1e1 99%,#e1e1e1 99%,#f1f1f1 100%,#f6f6f6 100%,#f1f1f1 102%);
-    background: linear-gradient(to bottom, #ffffff 0%,#e1e1e1 84%,#e1e1e1 99%,#e1e1e1 99%,#f1f1f1 100%,#f6f6f6 100%,#f1f1f1 102%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1f1f1',GradientType=0 );
     }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.4em;
     margin: 5px;
     span {
@@ -49,20 +47,20 @@ p {
 }
 
 h1 {
-    font-family: $mainFont;
-    color: $textColor;
-    margin: 20px auto;
+    font-family: $headerFont;
+    color: white;
+    margin: 20px 10px;
     text-align: center;
     font-size: 1.8em;
     letter-spacing: .7px;
-    font-weight: bold;
+    font-weight: 300;
     span {
         color: $textHighlightColor;
     }
 }
 
 h2 {
-    font-family: $mainFont;
+    font-family: $headerFont;
     color: black;
     margin: 0px 0 15px 0;
     padding: 10px;

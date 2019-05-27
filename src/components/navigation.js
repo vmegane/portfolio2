@@ -1,14 +1,6 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
-// import {
-//     Router,
-//     Route,
-//     Link,
-//     Switch,
-//     NavLink,
-// } from 'react-router-dom';
-import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
 import { configureAnchors } from 'react-scrollable-anchor';
+import Slide from 'react-reveal/Slide';
 
 
 class Nav extends React.Component {
@@ -18,9 +10,9 @@ class Nav extends React.Component {
             visible: false
         };
     }
-    componentWillMount() {
-        configureAnchors({offset: -60, scrollDuration: 1000})
-      }
+    // componentWillMount() {
+    //     configureAnchors({offset: -60, scrollDuration: 1000})
+    //   }
 
     toggleMenu = () => {
         this.setState({
@@ -40,8 +32,10 @@ class Nav extends React.Component {
         let menuShowHide = !this.state.visible ? "list-wrapper hide-menu" : "list-wrapper show-menu";
         return (
             <nav className="navigation-wrapper">
+                <Slide right when={this.state.visible}>
 
                 <div className={menuShowHide} onClick={this.handleClick}>
+                
                    <ul className="navigation-list">
                             <li >
                             <a href='#home'>HOME</a>
@@ -58,13 +52,29 @@ class Nav extends React.Component {
                         </li>
                         </ul>
                    </div>
-                        
+                   </Slide>
+
                         <div className="burger-menu-icon" onClick={this.handleClick}>
                             <div></div>
                             <div></div>
                             <div></div>
                         </div>
 
+                        <ul className="navigation-list-desktop">
+                            <li >
+                            <a href='#home'>HOME</a>
+                        </li>
+                            <li >
+                            <a href='#about'>ABOUT</a>
+
+                        </li>
+                            <li>
+                            <a href='#projects'>MY WORK</a>
+                        </li>
+                            <li>
+                            <a href='#contact'>CONTACT</a>
+                        </li>
+                        </ul>
             </nav>
         )
     }
