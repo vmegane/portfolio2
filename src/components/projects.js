@@ -4,6 +4,8 @@ import Project from './slide';
 import Flip from 'react-reveal/Flip';
 import portfolio from '../images/portfolio.jpg';
 import memory from '../images/memory.jpg'
+import roomies from '../images/roomies.png'
+import ember from '../images/ember.png'
 
 
 
@@ -16,11 +18,11 @@ class Projects extends React.Component {
             projects: [
                 {
                     id: 1,
-                    img: 'https://fakeimg.pl/300x200',
+                    img: roomies,
                     title: 'Roomies',
-                    description: 'An App for flat-sharing, React with Firebase back-end and authentication, work in progress',
+                    description: 'An App for flat-sharing, React, Redux with Firebase back-end, authentication and cloud funtions, work in progress',
                     label: 'react',code: 'https://github.com/vmegane/Roomies3',
-                    preview: 'https://vmegane.github.io/Roomies3/'
+                    preview: 'https://roomies-80535.web.app/'
                 },
                 {
                     id: 2,
@@ -33,12 +35,12 @@ class Projects extends React.Component {
                 },
                 {
                     id: 3,
-                    img: 'https://fakeimg.pl/300x200',
-                    title: 'title3',
-                    description: 'some pituput blah',
+                    img: ember,
+                    title: 'Star Wars App',
+                    description: 'First attempt to modern JS frameworks, created with Ember using REST API',
                     label: 'ember',
-                    code: 'https://github.com/vmegane/memory-game',
-                    preview: 'https://vmegane.github.io/memory-game/'
+                    code: 'https://github.com/vmegane/sw-ember2',
+                    preview: ''
                 },
                 {
                     id: 4,
@@ -59,13 +61,10 @@ class Projects extends React.Component {
             filteredby: e.target.innerText
         })
 
-        // let allProjects = this.state.projects;
-        // let filteredList = allProjects.filter (project => project.label === e.target.innerText )
-        // console.log(filteredList);
-        //this.state.projects.filter( (project) => project.label === e.target.innerText )
     }
 
     clearFiltering = (e) => {
+        e.preventDefault();
         this.setState({
             filteredby: ''
         })
@@ -74,10 +73,8 @@ class Projects extends React.Component {
 
     render() {
         let allProjects = this.state.projects;
-        let classes = 'button'
         let filteredProjects = [];
         let query = this.state.filteredby;
-        console.log('query', query)
         if (query !== '') {
             filteredProjects = allProjects.filter(project => project.label === query)
         }
@@ -93,7 +90,7 @@ class Projects extends React.Component {
                     <div className="projects-content-wrapper">
                         <h1>My work</h1>
                         <p>
-                    A few of the projects I've created along the way, I will be including more positions shortly :). <br/>
+                    A few of the projects I've created along the way, to be extended :). <br/>
                     Tap on a project for details.
                         </p>
 

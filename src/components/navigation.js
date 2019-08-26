@@ -1,5 +1,4 @@
 import React from 'react';
-import { configureAnchors } from 'react-scrollable-anchor';
 import Slide from 'react-reveal/Slide';
 
 
@@ -10,10 +9,7 @@ class Nav extends React.Component {
             visible: false
         };
     }
-    // componentWillMount() {
-    //     configureAnchors({offset: -60, scrollDuration: 1000})
-    //   }
-
+  
     toggleMenu = () => {
         this.setState({
             visible: !this.state.visible

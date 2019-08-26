@@ -2,11 +2,10 @@ import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { goToTop } from 'react-scrollable-anchor'
 import linkedin from '../icons/linkedin.svg';
-import facebook from '../icons/facebook.svg';
 import github from '../icons/github.svg';
 import instagram from '../icons/instagram.svg';
 
-function Projects(){
+function Footer(){
         return (
             <ScrollableAnchor id={'#footer'}>
 
@@ -26,4 +25,4 @@ function Projects(){
         );
 }
 
-export default Projects;
+export default Footer;

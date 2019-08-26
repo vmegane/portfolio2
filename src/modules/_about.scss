@@ -1,9 +1,7 @@
 
 .about-wrapper {
-    //height: 100vh;
     width: 100vw;
     background-size: cover;
-    //background: $bgColor;
 
 
     .about-content-wrapper {
@@ -55,6 +53,7 @@
             border-bottom: 2px solid $borderColor;
                     h2 {
                 color: $textColor;
+                font-family: $headerFont;
             }
             p {
                 font-size: 1em;
@@ -125,7 +124,7 @@
                             @for $level from 1 through 100 {
                                 .bar-fill-#{$level} {
                                     width: $level * 1%;
-                                    background-image: linear-gradient(to right,$barColor, #6b8eab);
+                                    background-color: $barColor;
                                     height: 18px;
                                     position: relative;
                                     top: -20px;

@@ -8,8 +8,8 @@ function Header() {
             <ScrollableAnchor id={'home'}>
 
             <section id="home" className="main-wrapper header-wrapper">
-                <div className="home-content-wrapper">
-                    <h1>Hello, I am <span>Paulina Opacka</span></h1>
+                <div className="header-content-wrapper">
+                    <h1>Hello, I am Paulina Opacka</h1>
                     <h1>I am a front-end developer</h1>
                     <Reveal effect="pulse">
                     <a href='#about'>

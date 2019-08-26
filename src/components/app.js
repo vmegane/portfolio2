@@ -5,7 +5,7 @@ import About from './about.jsx';
 import Nav from './navigation.jsx';
 import Projects from './projects.jsx';
 import Contact from './contact.jsx';
-import Slide from './slide';
+import Footer from './footer.jsx';
 
 import {
     Router,
