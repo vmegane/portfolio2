@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/portfolio2/static/media/ember.f9863198.png"
   },
   {
-    "revision": "e73e97dd143f226ee3bf",
-    "url": "/portfolio2/static/css/main.76f86170.chunk.css"
+    "revision": "6eacb754fc27f469e314",
+    "url": "/portfolio2/static/css/main.6d68f03b.chunk.css"
   },
   {
     "revision": "fa5be7429db0bdfd074a",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/portfolio2/static/media/roomies.de86067c.png"
   },
   {
-    "revision": "e73e97dd143f226ee3bf",
-    "url": "/portfolio2/static/js/main.e73e97dd.chunk.js"
+    "revision": "6eacb754fc27f469e314",
+    "url": "/portfolio2/static/js/main.6eacb754.chunk.js"
   },
   {
     "revision": "73e8a8ac6fa479ec19e5fe0cb7a81c01",
@@ -44,19 +44,19 @@ self.__precacheManifest = [
     "url": "/portfolio2/static/media/instagram.b0503764.svg"
   },
   {
-    "revision": "2ebedcc2a99a1366d319fc55fb609a44",
-    "url": "/portfolio2/static/media/me.2ebedcc2.jpg"
-  },
-  {
     "revision": "fcf15d16b564a13c2252168868deb831",
     "url": "/portfolio2/static/media/bg-image-iceland-mobile.fcf15d16.png"
+  },
+  {
+    "revision": "2ebedcc2a99a1366d319fc55fb609a44",
+    "url": "/portfolio2/static/media/me.2ebedcc2.jpg"
   },
   {
     "revision": "d4739f5ad132cc643a01a4e2697686ae",
     "url": "/portfolio2/static/media/bg-image-iceland.d4739f5a.jpg"
   },
   {
-    "revision": "163bbb440a6d7673250ef9941a598318",
+    "revision": "7a60a406bb325dac5d52c25631eeb880",
     "url": "/portfolio2/index.html"
   }
 ];

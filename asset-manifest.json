@@ -1,7 +1,7 @@
 {
-  "main.css": "/portfolio2/static/css/main.76f86170.chunk.css",
-  "main.js": "/portfolio2/static/js/main.e73e97dd.chunk.js",
-  "main.js.map": "/portfolio2/static/js/main.e73e97dd.chunk.js.map",
+  "main.css": "/portfolio2/static/css/main.6d68f03b.chunk.css",
+  "main.js": "/portfolio2/static/js/main.6eacb754.chunk.js",
+  "main.js.map": "/portfolio2/static/js/main.6eacb754.chunk.js.map",
   "static/js/1.fa5be742.chunk.js": "/portfolio2/static/js/1.fa5be742.chunk.js",
   "static/js/1.fa5be742.chunk.js.map": "/portfolio2/static/js/1.fa5be742.chunk.js.map",
   "runtime~main.js": "/portfolio2/static/js/runtime~main.099cc4b1.js",
@@ -14,8 +14,8 @@
   "static/media/instagram.svg": "/portfolio2/static/media/instagram.b0503764.svg",
   "static/media/App.scss": "/portfolio2/static/media/bg-image-iceland.d4739f5a.jpg",
   "static/media/memory.jpg": "/portfolio2/static/media/memory.2393363c.jpg",
-  "static/css/main.76f86170.chunk.css.map": "/portfolio2/static/css/main.76f86170.chunk.css.map",
+  "static/css/main.6d68f03b.chunk.css.map": "/portfolio2/static/css/main.6d68f03b.chunk.css.map",
   "index.html": "/portfolio2/index.html",
-  "precache-manifest.4b441ce8caa379005174d22887cf86de.js": "/portfolio2/precache-manifest.4b441ce8caa379005174d22887cf86de.js",
+  "precache-manifest.6521c6c975c4a4146e28094e940f7f42.js": "/portfolio2/precache-manifest.6521c6c975c4a4146e28094e940f7f42.js",
   "service-worker.js": "/portfolio2/service-worker.js"
 }
